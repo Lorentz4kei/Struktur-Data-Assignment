@@ -1,3 +1,4 @@
 # Struktur-Data-Assignment
-# Mochamad Aditya S
-
+# Nama  : Mochamad Aditya S
+# Nim   : 2311102193
+# Kelas : IF-11-E
