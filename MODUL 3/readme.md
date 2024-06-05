@@ -1,6 +1,6 @@
 # <h1 align="center"> Laporan Praktium Modul 3</h1>
-<p align="center"> Bhara Yudha Pamungkas <p>
-<p align="center"> 2311102186 </p>
+<p align="center"> Aditya Sulistiawan <p>
+<p align="center"> 2311102193 </p>
 <p align="center"> IF-11-E </p>
 
 ## Dasar Teori 
