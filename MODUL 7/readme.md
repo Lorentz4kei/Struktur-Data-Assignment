@@ -1,6 +1,6 @@
 # <h1 align="center"> Laporan Praktium Modul 7 Queue </h1>
-<p align="center"> Bhara Yudha Pamungkas <p>
-<p align="center"> 2311102186 </p>
+<p align="center"> Aditya Sulistiawan <p>
+<p align="center"> 2311102193 </p>
 
 ## Dasar Teori
 <p align ="justify"> 
