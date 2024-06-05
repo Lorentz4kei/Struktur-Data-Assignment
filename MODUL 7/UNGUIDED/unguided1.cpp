@@ -1,134 +1,99 @@
 #include <iostream>
 using namespace std;
-const int maksimalQueue = 5;
-int front = 0;
-int back = 0;
 
 struct Node
 {
     string data;
     Node *next;
 };
-Node *head, *tail, *Nodebaru, *temp, *del;
-void innit()
-{
-    head = NULL;
-    tail = NULL;
-}
+
+Node *front = nullptr;
+Node *back = nullptr;
+
 bool isFull()
-{ // Pengecekan antrian penuh atau tidak
-    if (back == maksimalQueue)
-    {
-        return true; // =1
-    }
-    else
-    {
-        return false;
-    }
+{
+    return false; // Linked list tidak memiliki batasan maksimum
 }
+
 bool isEmpty()
-{ // Antriannya kosong atau tidak
-    if (head == NULL)
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
+{
+    return front == nullptr;
 }
+
 void enqueueAntrian(string data)
-{ // Fungsi menambahkan antrian
-    Nodebaru = new Node;
-    Nodebaru->data = data;
-    Nodebaru->next = NULL;
+{
+    Node *newNode = new Node;
+    newNode->data = data;
+    newNode->next = nullptr;
+
     if (isEmpty())
     {
-        head = Nodebaru;
-        tail = Nodebaru;
-        tail->next = NULL;
+        front = newNode;
+        back = newNode;
     }
     else
     {
-        tail->next = Nodebaru;
-        tail = Nodebaru;
-        tail->next = NULL;
+        back->next = newNode;
+        back = newNode;
     }
 }
+
 void dequeueAntrian()
-{ // Fungsi mengurangi antrian
+{
     if (isEmpty())
     {
         cout << "Antrian kosong" << endl;
+        return;
     }
-    else
-    {
-        if (head->next != NULL)
-        {
 
-            temp = head;
-            head = head->next;
-            delete temp;
-        }
-        else
-        {
-            head = NULL;
-            tail = NULL;
-        }
+    Node *temp = front;
+    front = front->next;
+    delete temp;
+
+    if (front == nullptr)
+    {
+        back = nullptr;
     }
 }
+
 int countQueue()
 {
-    temp = head;
-    int jumlah = 0;
-    while (temp != NULL)
+    int count = 0;
+    Node *current = front;
+    while (current != nullptr)
     {
-        temp = temp->next;
-        jumlah++;
+        count++;
+        current = current->next;
     }
-    return jumlah;
+    return count;
 }
-void clearQueue()
-{ // Fungsi menghapus semua antrian
-    if (isEmpty())
-    {
-        cout << "Antrian kosong" << endl;
-    }
-    else
-    {
-        del = head;
-        while (del != NULL)
-        {
-            temp = del;
-            del = del->next;
-            delete temp;
-        }
-    }
-}
-void viewQueue()
-{ // Fungsi melihat antrian
-    cout << "Data antrian teller:" << endl;
-    if (isEmpty())
-    {
-        cout << "Antrian kosong" << endl;
-    }
 
-    else
+void clearQueue()
+{
+    while (front != nullptr)
     {
-        temp = head;
-        while (temp != NULL)
-        {
-            cout << "data" << temp->data << endl;
-            temp = temp->next;
-        }
+        Node *temp = front;
+        front = front->next;
+        delete temp;
     }
+    back = nullptr;
+}
+
+void viewQueue()
+{
+    cout << "Data antrian teller:" << endl;
+    Node *current = front;
+    while (current != nullptr)
+    {
+        cout << current->data << " ";
+        current = current->next;
+    }
+    cout << endl;
 }
 
 int main()
 {
-    innit();
-
-    enqueueAntrian("Azrino");
+    enqueueAntrian("Andi");
     enqueueAntrian("Maya");
     viewQueue();
     cout << "Jumlah antrian = " << countQueue() << endl;
@@ -138,7 +103,5 @@ int main()
     clearQueue();
     viewQueue();
     cout << "Jumlah antrian = " << countQueue() << endl;
-
     return 0;
 }
-// Kondisi ketika queue kosong

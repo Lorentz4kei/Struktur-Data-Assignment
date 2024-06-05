@@ -1,9 +1,11 @@
 #include <iostream>
 using namespace std;
+
 const int maksimalQueue = 5; // Maksimal antrian
 int front = 0;               // Penanda antrian
 int back = 0;                // Penanda
 string queueTeller[5];       // Fungsi pengecekan
+
 bool isFull()
 { // Pengecekan antrian penuh atau tidak
     if (back == maksimalQueue)
@@ -35,7 +37,7 @@ void enqueueAntrian(string data)
     else
     {
         if (isEmpty())
-        {
+        { // Kondisi ketika queue kosong
             queueTeller[0] = data;
             front++;
             back++;
@@ -99,18 +101,17 @@ void viewQueue()
         }
     }
 }
-
-int main() {
-enqueueAntrian("Andi");
-enqueueAntrian("Maya");
-viewQueue();
-cout << "Jumlah antrian = " << countQueue() << endl;
-dequeueAntrian();
-viewQueue();
-cout << "Jumlah antrian = " << countQueue() << endl;
-clearQueue();
-viewQueue();
-cout << "Jumlah antrian = " << countQueue() << endl;
-return 0;
+int main()
+{
+    enqueueAntrian("Andi");
+    enqueueAntrian("Maya");
+    viewQueue();
+    cout << "Jumlah antrian = " << countQueue() << endl;
+    dequeueAntrian();
+    viewQueue();
+    cout << "Jumlah antrian = " << countQueue() << endl;
+    clearQueue();
+    viewQueue();
+    cout << "Jumlah antrian = " << countQueue() << endl;
+    return 0;
 }
-// Kondisi ketika queue kosong

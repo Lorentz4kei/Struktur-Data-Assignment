@@ -1,125 +1,105 @@
 #include <iostream>
-#include <iomanip>
-using namespace std;
+#include <string>
 
-struct Mahasiswa
-{
-    string nama;   // Nama mahasiswa
-    long long nim; // NIM mahasiswa
-};
+using namespace std;
 
 struct Node
 {
-    Mahasiswa data; // Data mahasiswa disimpan dalam node
-    Node *next;     // Pointer ke node berikutnya dalam antrian
+    string namaMahasiswa;
+    string nim;
+    Node *next;
 };
 
-// Pointer global untuk mengelola bagian depan dan belakang antrian
-Node *front = NULL;
-Node *back = NULL;
+Node *front = nullptr;
+Node *back = nullptr;
 
-// Fungsi untuk memeriksa apakah antrian kosong
+bool isFull()
+{
+    return false; // Linked list tidak memiliki batasan maksimum
+}
+
 bool isEmpty()
 {
-    return front == NULL; // Antrian kosong jika front adalah NULL
+    return front == nullptr;
 }
 
-// Fungsi untuk menambahkan elemen ke belakang antrian
-void enqueueAntrian(string nama, long long nim)
+void enqueueAntrian(string nama, string nim)
 {
-    Node *newNode = new Node;  // Membuat node baru
-    newNode->data.nama = nama; // Mengatur nama mahasiswa untuk node baru
-    newNode->data.nim = nim;   // Mengatur NIM mahasiswa untuk node baru
-    newNode->next = NULL;      // Node baru akan menjadi node terakhir, jadi next adalah NULL
+    Node *newNode = new Node;
+    newNode->namaMahasiswa = nama;
+    newNode->nim = nim;
+    newNode->next = nullptr;
 
-    if (isEmpty()) // Jika antrian kosong
+    if (isEmpty())
     {
-        front = back = newNode; // front dan back mengarah ke node baru
+        front = newNode;
+        back = newNode;
     }
-    else // Jika antrian tidak kosong
+    else
     {
-        back->next = newNode; // Menautkan node baru setelah node belakang saat ini
-        back = newNode;       // Memperbarui pointer back ke node baru
+        back->next = newNode;
+        back = newNode;
     }
 }
 
-// Fungsi untuk menghapus elemen dari depan antrian
 void dequeueAntrian()
 {
-    if (isEmpty()) // Jika antrian kosong
+    if (isEmpty())
     {
         cout << "Antrian kosong" << endl;
-    }
-    else // Jika antrian tidak kosong
-    {
-        Node *temp = front;  // Simpan sementara node depan
-        front = front->next; // Pindahkan pointer front ke node berikutnya
-        delete temp;         // Hapus node depan lama
-
-        if (front == NULL) // Jika antrian sekarang kosong
-        {
-            back = NULL; // Perbarui pointer back ke NULL
-        }
-    }
-}
-
-// Fungsi untuk menghitung jumlah elemen dalam antrian
-int countQueue()
-{
-    int count = 0;       // Inisialisasi hitungan ke nol
-    Node *curr = front;  // Mulai dari depan antrian
-    while (curr != NULL) // Traversal hingga akhir antrian
-    {
-        count++;           // Menambah hitungan untuk setiap node
-        curr = curr->next; // Pindah ke node berikutnya
-    }
-    return count; // Kembalikan jumlah node
-}
-
-// Fungsi untuk mengosongkan antrian
-void clearQueue()
-{
-    while (!isEmpty()) // Selama antrian tidak kosong
-    {
-        dequeueAntrian(); // Hapus elemen dari depan antrian
-    }
-}
-
-// Fungsi untuk menampilkan elemen-elemen dalam antrian
-void viewQueue()
-{
-    cout << "====== Data antrian mahasiswa ======" << endl;
-    if (isEmpty()) // Jika antrian kosong
-    {
-        cout << "Data kosong !" << endl;
         return;
     }
 
-    cout << "-----------------------------------------" << endl;
-    cout << "|       Nama         |       NIM        |" << endl;
-    cout << "-----------------------------------------" << endl;
+    Node *temp = front;
+    front = front->next;
+    delete temp;
 
-    Node *curr = front;  // Mulai dari depan antrian
-    while (curr != NULL) // Traversal hingga akhir antrian
+    if (front == nullptr)
     {
-        cout << "| " << setw(18) << left << curr->data.nama << " | " << setw(17) << left << curr->data.nim << "|" << endl; // Cetak nama dan NIM node
-        curr = curr->next;                                                                                                 // Pindah ke node berikutnya
+        back = nullptr;
     }
-    cout << "-----------------------------------------" << endl;
+}
+
+int countQueue()
+{
+    int count = 0;
+    Node *current = front;
+    while (current != nullptr)
+    {
+        count++;
+        current = current->next;
+    }
+    return count;
+}
+
+void clearQueue()
+{
+    while (front != nullptr)
+    {
+        Node *temp = front;
+        front = front->next;
+        delete temp;
+    }
+    back = nullptr;
+}
+
+void viewQueue()
+{
+    cout << "Data antrian mahasiswa:" << endl;
+    Node *current = front;
+    while (current != nullptr)
+    {
+        cout << "Nama: " << current->namaMahasiswa << ", NIM: " << current->nim << endl;
+        current = current->next;
+    }
 }
 
 int main()
 {
-    enqueueAntrian("Baskoro", 111111111);
-    enqueueAntrian("Ananda", 2311102187);
-    viewQueue(); // Menampilkan antrian
-    cout << "\nJumlah antrian = " << countQueue() << "\n\n";
-    dequeueAntrian(); // Menghapus elemen dari depan antrian
-    viewQueue();      // Menampilkan antrian
-    cout << "\nJumlah antrian = " << countQueue() << "\n\n";
-    clearQueue(); // Mengosongkan antrian
-    viewQueue();  // Menampilkan antrian
-    cout << "\nJumlah antrian = " << countQueue() << "\n\n";
-
+    enqueueAntrian("Andi", "2311102186");
+    enqueueAntrian("Budi", "2311102184");
+    viewQueue();
+    dequeueAntrian();
+    viewQueue();
     return 0;
 }
