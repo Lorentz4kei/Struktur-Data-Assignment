@@ -3,66 +3,60 @@
 
 ## Dasar Teori
 Tipe Data 
-Tipe data adalah konsep yang digunakan dalam pemrograman untuk menunjukkan jenis 
-nilai atau informasi yang disimpan dalam suatu variabel atau konstanta. 
-Macam-macam tipe data yang akan digunakan adalah sebagai berikut : 
+Tipe data adalah konsep yang digunakan dalam pemrograman untuk 
+menunjukkan tipe nilai atau informasi yang disimpan dalam variabel atau konstanta.
+ Berbagai tipe data yang  digunakan adalah:: 
     1.  Tipe Data Primitif. 
     2.  Tipe Data Abstrak. 
     3.  Tipe Data Koleksi.
 
 Tipe Data Primitif 
-Primitive data type adalah jenis data dasar yang dapat menampung satu nilai pada satu 
-waktu dan nilai tersebut tidak dapat diubah melalui referensi dari jenis data non 
-primitive. Jika dua nilai dari jenis data primitif sama, maka jenis data primitif tersebut 
-dianggap sama. Adapun daftar tipe data primitif yang umum digunakan dalam bahasa 
+Tipe data primitif adalah tipe data dasar yang masing-masing dapat berisi satu nilai,
+ dan nilainya tidak dapat diubah dengan referensi dari tipe data primitif non-.
+ Tipe data primitif dianggap sama jika dua nilai tipe data primitif  sama.
+ Ada daftar tipe data primitif yang umum digunakan dalam bahasa tersebut.
 pemrograman C++ yaitu :  
-    1.  Int : Tipe data integer adalah salah satu tipe data primitif dalam pemrograman 
-        yang digunakan untuk menyimpan bilangan bulat (bilangan yang tidak memiliki 
-        pecahan atau desimal). 
-    2.  Float : Tipe data float adalah salah satu tipe data primitif dalam pemrograman 
-        yang digunakan untuk menyimpan bilangan pecahan (bilangan yang memiliki 
-        bagian desimal). 
-    3.  Double : Tipe data double adalah salah satu tipe data primitif dalam 
-        pemrograman yang digunakan untuk menyimpan bilangan pecahan (bilangan 
-        yang memiliki bagian desimal) dengan presisi ganda dibandingkan dengan tipe 
-        data float. 
-    4.  Char : Char atau karakter adalah tipe data primitif dalam pemrograman yang 
-        digunakan untuk menyimpan satu karakter, seperti huruf, angka, tanda baca, atau 
-        karakter khusus lainnya. 
+    1.  Int : Tipe data integer adalah salah satu dari tipe data primitif  pemrograman 
+        yang digunakan untuk menyimpan bilangan bulat (angka tanpa pecahan atau titik desimal).
+    2.  Float : Tipe data Float adalah salah satu tipe data primitif  pemrograman 
+        yang digunakan untuk menyimpan angka desimal (angka dengan bagian desimal).
+    3.  Double : Tipe data Double adalah  tipe data primitif pemrograman 
+        yang digunakan untuk menyimpan angka desimal (angka dengan bagian pecahan) 
+        dengan presisi ganda dibandingkan dengan tipe  data float .
+    4.  Char : Char atau char adalah tipe data dasar dalam pemrograman yang  digunakan 
+        untuk menyimpan karakter tunggal seperti huruf, angka, tanda baca, atau  karakter 
+        khusus lainnya.
     5.  Bool : Bool atau boolean adalah tipe data primitif dalam pemrograman yang 
         digunakan untuk menyimpan nilai kebenaran (true atau false). 
-    6.  Void : Tipe data void adalah sebuah tipe data khusus dalam pemrograman yang 
-        menandakan tidak adanya nilai atau data yang dihasilkan oleh suatu fungsi atau 
-        prosedur. 
+    6.  Void : Tipe data void adalah  tipe data khusus dalam pemrograman yang menunjukkan
+        bahwa tidak ada nilai atau data yang dihasilkan oleh suatu fungsi atau  prosedur. 
 
 Tipe Data Abstrak 
-Abstract data type atau tipe data abstrak adalah jenis tipe data dalam pemrograman 
-yang digunakan untuk mendeskripsikan sifat dan perilaku suatu objek atau struktur 
-data. Dalam tipe data ini biasanya dibuat dalam sebuah kelas (class), kelas ini 
-merupakan pengembangan dari sebuah struct dalam bahasa pemrograman C++. 
+Tipe data abstrak atau tipe data abstrak adalah  tipe data dalam pemrograman
+yang digunakan untuk menggambarkan sifat dan perilaku suatu objek atau struktur  data.
+Tipe data ini biasanya dibuat dalam suatu kelas.
+Kelas  ini  merupakan pengembangan dari konstruksi bahasa pemrograman C++.
     a.  Class : kelas berisi definisi data dan metode yang digunakan untuk 
         menggambarkan suatu objek dan perilakunya. 
     b.  Struct / structure :  Tipe data yang di bangun dan berisi kumpulan variabel 
         yang memiliki nama yang sama dan terkait satu sama lai
 
 Tipe Data Koleksi  
-Tipe data koleksi adalah tipe data dalam pemrograman yang digunakan untuk 
-menyimpan kumpulan nilai atau objek yang serupa dalam satu variabel atau struktur 
-data. Tipe data koleksi digunakan untuk menyimpan dan memanipulasi data yang 
-berjumlah banyak dalam satu waktu.  
-Tipe data koleksi umumnya terdiri dari beberapa jenis, di antaranya : 
+Tipe data kumpulan adalah tipe data  pemrograman yang digunakan untuk  menyimpan kumpulan 
+nilai atau objek  serupa dalam satu variabel atau struktur  data.
+Tipe data koleksi digunakan untuk menyimpan dan memanipulasi data  dalam jumlah besar secara bersamaan.
+Tipe data koleksi biasanya terdiri dari beberapa tipe:
     1.  Array : adalah tipe data koleksi yang digunakan untuk menyimpan data dengan 
         tipe data yang sama dalam urutan tertentu. Array memungkinkan programmer 
         untuk mengakses elemen data secara mudah dengan menggunakan indeks. 
     2.  Map atau Dictionary: adalah tipe data koleksi yang digunakan untuk 
         menyimpan data dalam bentuk pasangan key-value. Map memungkinkan 
         programmer untuk mengakses nilai berdasarkan key-nya dengan mudah. 
-    3.  Vector adalah tipe data koleksi dalam pemrograman yang digunakan untuk 
-        menyimpan data dengan tipe data yang sama dalam urutan tertentu dan 
-        memiliki ukuran yang dapat diubah. Vector mirip dengan array, namun vector 
-        memiliki kemampuan untuk mengubah ukurannya secara dinamis saat program 
-        sedang berjalan.
-
+    3.  Vektor adalah kumpulan tipe data  dalam pemrograman yang digunakan untuk  
+        menyimpan data dengan tipe data yang  
+        sama dalam urutan tertentu dan  dapat diubah ukurannya.
+        Vektor mirip dengan array, tetapi vektor mempunyai kemampuan untuk mengubah 
+        ukurannya secara dinamis saat program sedang berjalan.
 
 
 
@@ -112,16 +106,12 @@ int main()
 }
 ```
 
-Program di atas merupakan contoh penggunaan tipe data primitif char dan float pada 
-sebuah program kalkulator sederhana yang dapat melakukan operasi matematika 
-dasar, yaitu penjumlahan, pengurangan, perkalian, dan pembagian. Program ini 
-menggunakan struktur kontrol switch untuk mengevaluasi operator yang dimasukkan 
-oleh pengguna dan melakukan operasi yang sesuai terhadap bilangan yang 
-dimasukkan oleh pengguna. Program akan meminta pengguna untuk memasukkan 
-operator dan dua bilangan, kemudian program akan menampilkan hasil operasi pada 
-layar. Jika operator yang dimasukkan tidak sesuai dengan empat operator matematika 
-dasar, maka program akan menampilkan pesan kesalahan "error!" pada layar.
-
+Program di atas adalah contoh penggunaan tipe data primitif char dan float pada .
+Ini adalah program perhitungan sederhana yang dapat melakukan  operasi matematika dasar: penjumlahan, pengurangan, perkalian, dan pembagian.
+Program  ini  menggunakan struktur kontrol sakelar untuk mengevaluasi operator  yang dimasukkan  oleh pengguna dan melakukan operasi terkait pada nilai numerik  yang  dimasukkan oleh pengguna.
+Program ini meminta pengguna untuk memasukkan operator dan dua angka.
+Program kemudian  menampilkan hasil operasi pada layar .
+Jika operator yang dimasukkan tidak sesuai dengan empat operator aritmatika dasar di , program akan menampilkan pesan kesalahan "Error!" di layar.
 ### 2. Tipe Data Abstrak
 ```C++
 #include<stdio.h> 
@@ -158,9 +148,8 @@ return 0;
 Program tersebut menginisialisasi dua variabel struktur "mahasiswa" yaitu "mhs1" 
 dan "mhs2" dengan data mahasiswa tertentu. Kemudian program mencetak 
 informasi mengenai data mahasiswa tersebut menggunakan fungsi printf() dengan 
-format yang telah ditentukan. Output dari program tersebut adalah informasi 
-mengenai data dua orang mahasiswa yang telah diinisialisasi sebelumnya, yaitu 
-nama, alamat, dan umur.
+format yang telah ditentukan. Output OK dari program ini adalah informasi tentang 
+dua data siswa yang  diinisialisasi sebelumnya: nama, alamat,  umur.
 
 ### 3. Tipe Data Koleksi
 ```C++
@@ -181,11 +170,11 @@ return 0;
 }
 ```
 
-Program menginisialisasi setiap elemen array dengan nilai tertentu menggunakan 
-operator "=" dan indeks elemen pada array. Selanjutnya, program mencetak nilai 
-dari tiga elemen pertama pada array menggunakan fungsi cout dengan format yang 
-telah ditentukan. Output dari program adalah informasi mengenai isi tiga elemen 
-pertama pada array "nilai".
+Program ini menginisialisasi setiap elemen array dengan nilai tertentu menggunakan  
+operator '=' dan indeks elemen dalam array.
+Program kemudian menggunakan cout untuk mencetak nilai untuk tiga elemen pertama dalam array.
+Output dari program fungsi format  yang ditentukan adalah informasi tentang konten 
+dari tiga elemen pertama dari array "nilai".
 
 ## Unguided
  
@@ -210,22 +199,15 @@ int main() {
     return 0; 
 }
 ```
-Program di atas menggunakan tipe data primitif double untuk menyimpan nilai 
-jari-jari, luas, dan keliling. Variabel jari_jari digunakan untuk menyimpan nilai 
-jari-jari lingkaran yang dimasukkan oleh pengguna melalui cin. Untuk 
-menghitung luas dan keliling lingkaran, program menggunakan rumus yang 
-sesuai dengan nilai pi yang dideklarasikan sebagai konstanta const double pi = 
-3.14;. Luas lingkaran dihitung dengan rumus pi * jari_jari * jari_jari, 
-sedangkan keliling lingkaran dihitung dengan rumus 2 * pi * jari_jari.Program 
-kemudian menampilkan hasil perhitungan luas dan keliling lingkaran 
-menggunakan ‘cout’.
-
-Dari program di atas, kita dapat menyimpulkan bahwa tipe data primitif sangat 
-berguna dalam pemrograman untuk menyimpan nilai numerik yang diperlukan 
-dalam perhitungan matematis. Dalam contoh ini, tipe data double digunakan 
-untuk mengakomodasi nilai desimal yang dihasilkan dari perhitungan. Selain 
-itu, cin dan cout juga merupakan fitur penting dalam bahasa C++ untuk 
-memungkinkan input dan output dari program. 
+Program di atas menggunakan tipe data primitif ganda untuk menyimpan nilai radius, luas, dan keliling .
+Variabel radius digunakan untuk menyimpan nilai radius lingkaran  yang dimasukkan oleh pengguna melalui cin.
+Untuk  menghitung luas dan keliling lingkaran, program menggunakan rumus yang  sesuai dengan nilai pi yang diberikan sebagai konstanta const double pi = 3,14; Hal ini diumumkan.
+Luas lingkaran dihitung dengan rumus pi*jari-jari*jari-jari, , dan keliling lingkaran dihitung dengan rumus 2*pi*jari-jari.
+Kemudian program  menampilkan hasil perhitungan luas dan keliling lingkaran sebagai “cout”.
+ 
+Dari program diatas kita dapat menyimpulkan bahwa tipe data primitif sangat  berguna dalam pemrograman untuk menyimpan angka-angka yang diperlukan untuk perhitungan matematis.
+Contoh ini menggunakan tipe data double  untuk menampung nilai desimal hasil perhitungan.
+Selain  itu, cin dan cout juga merupakan fungsi penting dari bahasa C++ yang memungkinkan input dan output  program.
 
 ### 2. Jelaskan fungsi dari class dan structur secara detail dan berikan contoh programnya!
 
@@ -255,8 +237,9 @@ int main() {
 return 0; 
 } 
 ```
-Pada program di atas, kita membuat sebuah class bernama Mahasiswa yang memiliki tiga properti, yaitu name, age, dan address. Kemudian, kita juga menambahkan sebuah metode bernama display() yang digunakanuntuk 
-menampilkan properti dari objek Mahasiswa yang telah dibuat.
+properti: Nama, Usia, dan Alamat.
+Selanjutnya, kita juga menambahkan  metode bernama display() untuk menampilkan properti  
+objek Mahasiswa yang  dibuat.
 
 Struct : Struct mirip dengan class dalam hal menyimpan data, namun berbeda dalam hal aksesibilitas dan penggunaannya. Struct hanya dapat menyimpan data, tanpa adanya fungsi yang terkait di dalamnya. Selain itu, semua properti dalam struct dianggap sebagai public, yang berarti dapat diakses langsung tanpa harus melalui metode. Berikut adalah contoh program sederhana untuk mengilustrasikan struct:
 
@@ -284,7 +267,9 @@ return 0;
 }
 ```
 
-Class : Class adalah tipe data khusus dalam bahasa pemrograman yang dapat menyimpan data dan fungsi di dalamnya. Class digunakan untuk mewakili objek yang terdiri dari beberapa properti (data) dan metode (fungsi) yang digunakan untuk memanipulasi data tersebut
+class: class adalah tipe data khusus dalam bahasa pemrograman yang dapat menyimpan data dan fungsi.
+class digunakan untuk mewakili suatu objek yang terdiri dari beberapa properti (data) dan metode 
+(fungsi) yang digunakan untuk memanipulasi data tersebut
 
 ### 3. Buat dan jelaskan program menggunakan fungsi map dan jelaskan perbedaan array dengan map.
 
@@ -308,15 +293,14 @@ int main() {
     return 0; 
 } 
 ```
-Program di atas menggunakan fungsi map dari library <map> pada C++. map 
-adalah tipe data asosiatif yang memetakan nilai kunci ke nilai data. Pada 
-program di atas, kita membuat variabel umur yang berisi map dari string (nama) 
-ke integer (umur). Kemudian, kita memasukkan beberapa data ke dalam umur 
-menggunakan notasi array. Selanjutnya, kita mencetak umur setiap orang 
-dengan mengakses nilai umur menggunakan notasi array. 
+Program di atas menggunakan fungsi peta dari perpustakaan C++. map
+adalah tipe data asosiatif yang memetakan nilai kunci ke nilai data. Pada program
+di atas, kita membuat variabel umur yang berisi peta dari string (nama)
+ke bilangan bulat (usia). Kemudian kita masukkan datanya ke dalam age
+menggunakan notasi array. Selanjutnya, umur
+setiap orang dicetak dengan mencari nilai umur dengan entri tabel. \N.
 
 ## Kesimpulan
-Dalam praktikum ini, kita mempelajari tentang tipe data yang terdiri dari tiga jenis, yaitu tipe data primitif, tipe data abstrak, dan tipe data koleksi. Tipe data primitif merupakan tipe data yang dapat menyimpan satu nilai pada satu waktu dan nilainya tidak dapat berubah dengan cara tipe data non-primitif. Jika nilainya sama, maka tipe data primitif tersebut akan dianggap sama. Kemudian, tipe data abstrak adalah tipe data yang digunakan untuk menggambarkan karakteristik dan perilaku sebuah objek dan biasanya diimplementasikan dalam  sebuah kelas. Kelas merupakan pengembangan dari sebuah struct dalam bahasa pemrograman C++. Sementara itu, tipe data koleksi adalah tipe data yang terdiri dari rangkaian data atau objek dengan indeks. Mahasiswa dapat membuat program dengan menggunakan ketiga tipe data tersebut. Proses pembuatan program mengajarkan kepada mahasiswa tentang ketelitian,ketekunan, dan active critical thinking dalam memecahkan masalah dan menyelesaikan program. Meskipun mahasiswa sudah berhasil membuat program yang dimaksudkan, namun masih diperlukan penemuan kode yang lebih ringkas untuk memperbaiki program yang telah dibuat.
-
+Pada latihan kali ini kita akan mempelajari tentang tipe data yang terdiri dari tiga tipe yaitu tipe data primitif, tipe data abstrak, dan tipe data kumpulan. Tipe data primitif adalah tipe data yang dapat menyimpan satu nilai dalam satu waktu dan nilainya tidak dapat diubah seperti tipe data non-primitif. Jika nilainya sama, maka tipe data primitif dianggap sama. Tipe data abstrak, kemudian, adalah tipe data yang digunakan untuk mendeskripsikan properti dan perilaku suatu objek, biasanya diimplementasikan di kelas. Kelas merupakan evolusi dari struktur bahasa pemrograman C++. Sedangkan tipe data kumpulan adalah tipe data yang terdiri dari serangkaian objek dengan data atau indeks. Siswa dapat membuat program dengan menggunakan ketiga jenis data tersebut. Proses pembuatan program mengajarkan siswa ketelitian, ketekunan, dan berpikir kritis aktif dalam pemecahan masalah dan pelaksanaan program. Meskipun siswa berhasil membuat program yang diusulkan, mereka masih perlu menemukan kode yang lebih ringkas untuk menyempurnakan program yang mereka buat. dari.
 ## Referensi
 [1] I. Holm, Narrator, and J. Fullerton-Smith, Producer, How to Build a Human [DVD]. London: BBC; 2002.
